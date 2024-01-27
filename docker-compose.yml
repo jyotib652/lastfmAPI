@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  lastfmapi:
+    build:
+      context: ./
+      dockerfile: ./lastfmapi.dockerfile
+    restart: always
+    ports:
+      - "8080:80"
+    deploy:
+      mode: replicated
+      replicas: 1
+    dns:
+      - 8.8.8.8
+    environment:
+      lastFm : "cffafe663addcae8dffc6e7fe14befe6"
+      musixMatch : "35b9cf320b8da2e1927a573f902c4e7f"
