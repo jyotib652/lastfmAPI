@@ -14,10 +14,11 @@ Depending upon the searched song, artist & lyrics it would also suggest some oth
    Suppose you cloned this git repo in your Home directory then run
       ```
    $ cd ~
+   $ make build_lastfm
    $ make up      // or, make up_build
-   $ ./lastFmApp
       
    ```
+   Now the Docker Container is build and running. Next, you have to send request to this Docker Container API.
 
 ### Example:
 To send request to this API use following examples:
