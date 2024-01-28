@@ -7,17 +7,8 @@ Depending upon the searched song, artist & lyrics it would also suggest some oth
 
 
 **To Run this Golang application** :
-1. First, If you want to create an executable and run it from terminal then go to the location where you cloned this git repo and then
-   use the following commands to create and run the executable file from terminal:
-   
-   Suppose you cloned this git repo in your Home directory then run
-   ```
-   $ cd ~
-   $ make build_lastfm      // This would create an executable file "lastFmApp"
-   $ ./lastFmApp
-   
-   ```
-3. Second, If you want to run the application in a Docker container then then go to the location where you cloned this git repo and then
+
+1. If you want to run the application in a Docker container then then go to the location where you cloned this git repo and then
    use the following commands to create and run the Docker container:
    
    Suppose you cloned this git repo in your Home directory then run
