@@ -13,7 +13,7 @@ Depending upon the searched song, artist & lyrics it would also suggest some oth
    
    Suppose you cloned this git repo in your Home directory then run
       ```
-   $ cd ~
+   $ cd ~/the/path/to/the/cloned/git/repo/directory
    $ make build_lastfm
    $ make up      // or, make up_build
       
