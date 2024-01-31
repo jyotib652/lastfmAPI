@@ -164,7 +164,7 @@ func (res *Response) MusixmatchSearchTrackID(wg *sync.WaitGroup) {
 	lyrics := trackName
 	musixMatchkey := os.Getenv("musixMatch")
 
-	// musixmatchURL := "https://api.musixmatch.com/ws/1.1/track.search?q_track=Mr.%20Brightside&q_artist=The%20Killers&q_lyrics=Mr.%20Brightside&apikey=35b9cf320b8da2e1927a573f902c4e7f"
+	// musixmatchURL := "https://api.musixmatch.com/ws/1.1/track.search?q_track=Mr.%20Brightside&q_artist=The%20Killers&q_lyrics=Mr.%20Brightside&apikey=<string>"
 	resp, err := http.Get(fmt.Sprintf("https://api.musixmatch.com/ws/1.1/track.search?q_track=%s&q_artist=%s&q_lyrics=%s&apikey=%s", trackName, artistName, lyrics, musixMatchkey))
 	// resp, err := http.Get(musixmatchURL)
 	if err != nil {
@@ -258,8 +258,6 @@ func (res *Response) MusixmatchSearchLyricsByTrackID(wg *sync.WaitGroup) {
 	trackID := fmt.Sprintf("%d", trackIDtemp)
 	musixMatchkey := os.Getenv("musixMatch")
 	// musixmatchURL := "https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=json&track_id=<string>&api_key=<string>"
-
-	// "https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=json&track_id=172729233&apikey=35b9cf320b8da2e1927a573f902c4e7f"
 
 	resp, err := http.Get(fmt.Sprintf("https://api.musixmatch.com/ws/1.1/track.lyrics.get?format=json&track_id=%s&apikey=%s", trackID, musixMatchkey))
 	if err != nil {
